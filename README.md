@@ -5,7 +5,8 @@ Lexical Based semi-automated Quality Assurance for Vaccine Ontology
 Lexical based approach for the identification of potential missing is-a relations within the [Vaccine Ontology](https://www.violinet.org/vaccineontology/)
 
 ## Requirements
-[Owlready2](https://owlready2.readthedocs.io/en/latest/index.html) [pandas](https://pandas.pydata.org/)
+* [Owlready2](https://owlready2.readthedocs.io/en/latest/index.html)
+* [pandas](https://pandas.pydata.org/)
 
 ## Inputs
 This script requires two inputs:
