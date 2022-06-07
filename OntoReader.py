@@ -33,6 +33,7 @@ class OntoReader:
                 anc.add(str(ancestor))
             self.labeldict[name] = {'name': name, 'label': concept.label, 'list': labellist, 'ancestors': anc}
             self.anclist[name] = anc
+        print("OntoReader object created successfully")
 
     def linked_methods(self):
         for c1 in self.anclist:
@@ -145,7 +146,7 @@ class OntoReader:
             C8 = expanded_out[key]['C2 (Unlinked)']
             C9 = expanded_out[key]['Label4']
             df.loc[i] = [C1, C2, C3, C4, C5, C6, C7, C8, C9]
-        df.to_csv(f"expanded_output_{today}.csv")
+        df.to_csv(f"{file}_expanded_output_{today}.csv")
         for i, diff in enumerate(mismatch.keys()):
             alist = []
             blist = []
@@ -163,11 +164,10 @@ class OntoReader:
             C2 = is_a_inference[key]['Unlinked Pair']
             C3 = is_a_inference[key]['Linked Pairs']
             df1.loc[i] = [C1, C2, C3]
-        df1.to_csv(f"is_a_inconsistencies_{today}.csv")
 
-
-file = "/Users/wmanuel3/OneDrive - The University of Texas Health Science Center at Houston/Education/Cui Labs/VO/ITP Recognition/VO.owl"
-test1 = OntoReader(file)
-test1.linked_methods()
-test1.unlinked_methods("http://purl.obolibrary.org/obo/BFO_0000040")
-test1.detect_inconsistencies()
+if __name__ == '__main__':
+    main()
+    ont_obj = OntoReader(file)
+    ont_obj.linked_methods()
+    ont_obj.unlinked_methods(root)
+    ont_obj.detect_inconsistencies()
