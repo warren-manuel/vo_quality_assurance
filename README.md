@@ -14,4 +14,4 @@ This script requires two inputs:
 2. Root IRI: The identifier for the root for which unlinked concepts will be exhaustively searched for (The IRI of a concept can be retrieved through an Ontology viewer such as [Protege](https://protege.stanford.edu/). Right click on the concept and select copy IRI)
 
 ## Usage
-~python OntoReader.oy <Ontology .owl file> <Root IRI for unlinked pairs>
+`python OntoReader.oy <Ontology .owl file> <Root IRI for unlinked pairs>`
