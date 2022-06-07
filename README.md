@@ -1,5 +1,4 @@
 # Vaccine Ontology Quality Assurance using Lexical Characteristics
-Lexical Based semi-automated Quality Assurance for Vaccine Ontology
 
 ## About
 Lexical based approach for the identification of potential missing is-a relations within the [Vaccine Ontology](https://www.violinet.org/vaccineontology/)
@@ -15,3 +14,4 @@ This script requires two inputs:
 
 ## Usage
 `python OntoReader.oy <Ontology .owl file> <Root IRI for unlinked pairs>`
+ex: `python OntoReader.py VO.owl http://purl.obolibrary.org/obo/BFO_0000040`
