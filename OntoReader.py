@@ -164,6 +164,11 @@ class OntoReader:
             C2 = is_a_inference[key]['Unlinked Pair']
             C3 = is_a_inference[key]['Linked Pairs']
             df1.loc[i] = [C1, C2, C3]
+        df1.to_csv(f"{file}_is_a_inconsistencies_{today}.csv")
+def main():
+    global file, root
+    file = sys.argv[1]
+    root = sys.argv[2]
 
 if __name__ == '__main__':
     main()
